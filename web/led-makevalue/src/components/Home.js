@@ -37,7 +37,7 @@ export class Home extends Component {
       console.log(snap.data().Hello);
     });
     this.db.collection("Test").doc("Pi").set({
-      Hello: 210
+      Hello: 200
     })
   }
 
@@ -48,7 +48,7 @@ export class Home extends Component {
           <div className="card-body">
             <h5 className="card-title">Name1</h5>
             <p className="card-text">위치: </p>
-            <button type="button" class="btn btn-primary" style={{marginRight: '10px'}}>LED</button>
+            <button type="button" onClick = {this.Test} class="btn btn-primary" style={{marginRight: '10px'}}>LED</button>
             <button type="button" class="btn btn-danger">Sound</button>
           </div>
         </div>
