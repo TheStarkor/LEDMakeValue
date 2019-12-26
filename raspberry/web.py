@@ -17,11 +17,11 @@ while True:
     flag = doc.to_dict()['Find']
 
     if flag == 1:
-        print ('찾는중')
+        print ('Finding!')
         alarm.play()
         doc_ref.set({u'Find': 0})
-        print ('완료')
+        print ('Done!')
     else:
-        print ('대기중')
+        print ('Waiting..')
 
     time.sleep(3)
