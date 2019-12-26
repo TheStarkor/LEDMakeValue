@@ -10,35 +10,14 @@ export class Home extends Component {
     console.log(1)
   }
 
-  Test = () => {
-    console.log('123');
-    // var citiesRef = this.db.collection("cities");
-    // citiesRef.doc("SF").set({
-    //   name: "San Francisco", state: "CA", country: "USA",
-    //   capital: false, population: 860000,
-    //   regions: ["west_coast", "norcal"] });
-    // citiesRef.doc("LA").set({
-    //   name: "Los Angeles", state: "CA", country: "USA",
-    //   capital: false, population: 3900000,
-    //   regions: ["west_coast", "socal"] });
-    // citiesRef.doc("DC").set({
-    //   name: "Washington, D.C.", state: null, country: "USA",
-    //   capital: true, population: 680000,
-    //   regions: ["east_coast"] });
-    // citiesRef.doc("TOK").set({
-    //   name: "Tokyo", state: null, country: "Japan",
-    //   capital: true, population: 9000000,
-    //   regions: ["kanto", "honshu"] });
-    // citiesRef.doc("BJ").set({
-    //   name: "Beijing", state: null, country: "China",
-    //   capital: true, population: 21500000,
-    //   regions: ["jingjinji", "hebei"] });
+  Find = () => {
     this.db.collection('Test').doc("Pi").get().then((snap) => {
       console.log(snap.data().Hello);
     });
     this.db.collection("Test").doc("Pi").set({
-      Hello: 200
+      Find: 1
     })
+    alert('찾는 중!')
   }
 
   render() {
@@ -46,26 +25,20 @@ export class Home extends Component {
       <div className="home">
         <div className="card w-90" style={{marginTop: '10px'}}>
           <div className="card-body">
-            <h5 className="card-title">Name1</h5>
-            <p className="card-text">위치: </p>
-            <button type="button" onClick = {this.Test} class="btn btn-primary" style={{marginRight: '10px'}}>LED</button>
-            <button type="button" class="btn btn-danger">Sound</button>
+            <h5 className="card-title">리모컨</h5>
+            <button type="button" onClick = {this.Find} class="btn btn-primary">찾아줘!</button>
           </div>
         </div>
         <div className="card w-90" style={{marginTop: '10px'}}>
           <div className="card-body">
-            <h5 className="card-title">Name2</h5>
-            <p className="card-text">위치: </p>
-            <button type="button" class="btn btn-primary" style={{marginRight: '10px'}}>LED</button>
-            <button type="button" class="btn btn-danger">Sound</button>
+            <h5 className="card-title">지갑</h5>
+            <button type="button" class="btn btn-primary">찾아줘!</button>
           </div>
         </div>
         <div className="card w-90" style={{marginTop: '10px'}}>
           <div className="card-body">
-            <h5 className="card-title">Name3</h5>
-            <p className="card-text">위치: </p>
-            <button type="button" class="btn btn-primary" style={{marginRight: '10px'}}>LED</button>
-            <button type="button" class="btn btn-danger">Sound</button>
+            <h5 className="card-title">열쇠</h5>
+            <button type="button" class="btn btn-primary">찾아줘!</button>
           </div>
         </div>
       </div>

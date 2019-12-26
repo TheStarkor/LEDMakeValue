@@ -11,7 +11,15 @@ while True:
     doc_ref = db.collection(u'Test').document(u'Pi')
 
     doc = doc_ref.get()
-    print(doc.to_dict())
-    time.sleep(1)
+    flag = doc.to_dict()['Find']
+
+    if flag == 1:
+        print ('찾는중')
+        doc_ref.set({u'Find': 0})   
+        print ('완료')
+    else:
+        print ('대기중')
+
+    time.sleep(3)
 # city = City.from_dict(doc.to_dict())
 # print(city)

@@ -17,7 +17,7 @@ while True:
     message = r.recognize_google(audio, language='ko-KR')
     print('Check: ' + message)
     speaker.tune(1318,0)
-    if (message == "문성" or message == "중학교"):
+    if (message == "문성" or message == "aaa"):
       for i in range(2) :
         speaker.tune(1318,100) #F_MI_6
         time.sleep(0.2)
